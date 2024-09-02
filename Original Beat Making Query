@@ -1,0 +1,935 @@
+#beats by slate beatmaking query
+import pyautogui
+import time
+import random
+import pyperclip
+import keyboard
+#NEXT STEP: RIGHT A QUERY THAT AUTO CROPS AUDIO AFTER 5 seconds that has no volume
+#Escape Query
+import keyboard
+import time
+#109 market location: 1760,184 for top left, 1718x18 for 105 marker
+def existing_query(query_count):
+
+
+    def type_write_variable_with_pyautogui(variable):
+        variable_str = str(variable)
+        pyautogui.typewrite(variable_str, interval=0.1)
+
+    loop_names = [
+"139 -F#-139-F#-expoarting ryan - @ryanbevolo x @simo.fre - experimental 139bpm (pain, piano, guitar, melodic, street, acoustic).wav",
+"141 -E-141-E-expoarting ryan - Grave Digger Mountain Emaj 141 @samabaretta @ryanbevolo (guitar, melodic).wav",
+"150 -B-150-B-expoarting ryan - Falling_Behind_150_Abmin_1ascensionbeatz_ryanbevolo.wav",
+"150 -C#-150-C#-expoarting ryan - @ryanbevolo x @producedbysammy - when love dies 150bpm (pain, piano, guitar, melodic).wav",
+"150 -E-150-E-expoarting ryan - @ryanbevolo x @producedbysammy - tonight 150bpm (pain, piano, guitar, melodic).wav",
+"150 -F#-150-F#-expoarting ryan - @ryanbevolo x @mccoyprod - behind the scenes 150bpm (pain, piano, guitar, melodic).wav",
+"150 -F#-150-F#-expoarting ryan - @ryanbevolo x @simo.fre - anxiety 150bpm (pain, piano, guitar, melodic).wav",
+"150 -G#-150-G#-expoarting ryan - @ryanbevolo x @1ascensionbeatz - hunger 150bpm (pain, piano, guitar, melodic).wav",
+"151 -D-151-D-expoarting ryan - @ryanbevolo x @prodbycamm - applied 151bpm (piano, guitar, pain, melodic).wav",
+"151 -D-151-D-expoarting ryan - @ryanbevolo x @prodbycamm - one in a million 151bpm (piano, guitar, pain, melodic).wav",
+"152 -D-152-D-expoarting ryan - @ryanbevolo x @prodbycamm - hold me up 152bpm (piano, guitar, pain, melodic).wav",
+"154 -D-154-D-expoarting ryan - @ryanbevolo x @atononmymind - social distance 154bpm (pain, piano, guitar, melodic).wav",
+"155 -C#-155-C#-expoarting ryan - @ryanbevolo x @prodbycamm - in my feelings 155bpm (piano, guitar, pain, melodic).wav",
+"155 -C#-155-C#-expoarting ryan - @ryanbevolo x @producedbysammy - apparent 155bpm (pain, piano, guitar, melodic).wav",
+"155 -D#-155-D#-expoarting ryan - @ryanbevolo x @prodbycamm - cuffed 155bpm (piano, guitar, pain, melodic).wav",
+"155 -D-155-D-expoarting ryan - @ryanbevolo x @redjon_wav - irreplaceable 155bpm (guitar, melodic).wav",
+"155 -F#-155-F#-expoarting ryan - @ryanbevolo x @simo.fre - trying to heal 155bpm (piano, guitar, melodic, pain).wav",
+"155 -F-155-F-expoarting ryan - @ryanbevolo x @simo.fre - from the start 155bpm (pain, piano, guitar, melodic).wav",
+"156 -D#-156-D#-expoarting ryan - @ryanbevolo x @layzbeats - wasted 156bpm (pain, piano, guitar, melodic).wav",
+"156 -D#-156-D#-expoarting ryan - @ryanbevolo x @simo.fre - messed up 156bpm (guitar, piano, pain, melodic).wav",
+"156 -E-156-E-expoarting ryan - @ryanbevolo x @prodbycamm - runaway 156bpm (piano, guitar, pain, melodic).wav",
+"156 -F-156-F-expoarting ryan - @ryanbevolo x @redjon_wav - genius 156bpm (guitar, melodic).wav",
+"158 -F-158-F-expoarting ryan - @ryanbevolo x @redjon_wav - compromise 158bpm (guitar, melodic).wav",
+"158 -F-158-F-expoarting ryan - @ryanbevolo x @simo.fre - no way home 158bpm (soul, street, rhodes, guitar, keys).wav",
+"160 -D#-160-D#-expoarting ryan - @ryanbevolo x @prodbycamm - rain will fall 160bpm (piano, guitar, pain, melodic).wav",
+"160 -D-160-D-expoarting ryan - @ryanbevolo x @simo.fre - blackballed 160bpm (guitar, piano, pain, melodic).wav",
+"160 -F#-160-F#-expoarting ryan - @ryanbevolo x @prodyozo - snap 160bpm (pain, piano, guitar, melodic).wav",
+"160 -F-160-F-expoarting ryan - @ryanbevolo x @hozaybeats - in my mind 160bpm (pain, piano, guitar, melodic).wav",
+"160 -F-160-F-expoarting ryan - @ryanbevolo x @prodyozo - untouchable 160bpm (pain, piano, guitar, melodic).wav",
+"161 -G#-161-G#-expoarting ryan - @ryanbevolo x @simo.fre - gucci cologne 161bpm (guitar, piano, pain, melodic).wav",
+"162 -A#-162-A#-expoarting ryan - @ryanbevolo x @prodyozo - judgement day 162bpm (pain, piano, guitar, melodic).wav",
+"162 -E-162-E-expoarting ryan - @ryanbevolo x @producedbysammy - finally won 162bpm (pain, piano, guitar, melodic).wav",
+"163 -C-163-C-expoarting ryan - @ryanbevolo x @prodyozo - intense 163bpm (piano, guitar, pain, melodic).wav",
+"163 -E-163-E-expoarting ryan - @ryanbevolo x @simo.fre - bent 163bpm (pain, piano, guitar, melodic).wav",
+"163 -F#-163-F#-expoarting ryan - @ryanbevolo x @simo.fre - far away 163bpm (pain, piano, guitar, melodic).wav",
+"164 -A-164-A-expoarting ryan - @ryanbevolo x @prodyozo - like magic 164bpm (pain, piano, guitar, melodic).wav",
+"164 -D#-164-D#-expoarting ryan - @ryanbevolo x @prodyozo - imagination 164bpm (pain, piano, guitar, melodic).wav",
+"164 -G#-164-G#-expoarting ryan - @ryanbevolo x @simo.fre - error 164bpm (guitar, piano, pain, melodic).wav",
+"165 -A#-165-A#-expoarting ryan - @ryanbevolo x @prodyozo - ice box 165bpm (pain, piano, guitar, melodic, street).wav",
+"165 -D#-165-D#-expoarting ryan - @ryanbevolo x @prodyozo - prove it 165bpm (pain, piano, guitar, melodic).wav",
+"165 -D-165-D-expoarting ryan - @ryanbevolo x @simo.fre - keys 165bpm (pain, street, piano, guitar, melodic).wav",
+"165 -G#-165-G#-expoarting ryan - @ryanbevolo x @prodyozo - lost time 165bpm (piano, guitar, pain, melodic).wav",
+"165 -G-165-G-expoarting ryan - @ryanbevolo x @prodbydavidmorse - determined 165bpm (piano, strings, ambient, street).wav",
+"166 -B-166-B-expoarting ryan - @ryanbevolo x @prodyozo - stranger 166bpm (pain, piano, guitar, melodic).wav",
+"166 -C#-166-C#-expoarting ryan - !@ryanbevolo x @prodyozo - heavens gates 166bpm (piano, guitar, pain, melodic).wav",
+"166 -C#-166-C#-expoarting ryan - @ryanbevolo x @prodyozo - maybe 166bpm (pain, piano, guitar, melodic).wav",
+"166 -F#-166-F#-expoarting ryan - @ryanbevolo x @prodyozo - like a movie 166bpm (piano, guitar, pain, melodic).wav",
+"166 -G#-166-G#-expoarting ryan - @ryanbevolo x @prodyozo - back and better 166bpm (pain, piano, guitar, melodic).wav",
+"166 -G-166-G-expoarting ryan - @ryanbevolo x @redjon_wav - stay awake 166bpm (guitar, melodic).wav",
+"167 -D#-167-D#-expoarting ryan - @ryanbevolo x @mccoyprod - broken pieces 167bpm (guitar, piano, pain, melodic).wav",
+"168 -D#-168-D#-expoarting ryan - @ryanbevolo x @hozaybeats - better off alone 168bpm (pain, piano, guitar, melodic).wav",
+"168 -D#-168-D#-expoarting ryan - @ryanbevolo x @prodyozo - never get over you 168bpm (pain, piano, guitar, melodic).wav",
+"170 -A#-170-A#-expoarting ryan - @ryanbevolo x @atononmymind - take a break 170bpm (pain, piano, guitar, melodic).wav",
+"170 -D#-170-D#-expoarting ryan - @ryanbevolo x @hozaybeats -my loved ones 170bpm (pain, piano, guitar, melodic).wav",
+"170 -E-170-E-expoarting ryan - @ryanbevolo x @simo.fre - wrong turn 170bpm (pain, piano, guitar, street, pain, melodic).wav",
+"171 -D#-171-D#-expoarting ryan - @ryanbevolo x @1ascensionbeatz - last hope 171bpm (pain, piano, guitar, melodic).wav",
+"172 -B-172-B-expoarting ryan - @ryanbevolo x @prodyozo - guilty 172bpm (pain, piano, guitar, melodic).wav",
+"176 -D#-176-D#-expoarting ryan - @ryanbevolo x @prodyozo - hold me forever 176bpm (guitar, melodic).wav",
+"183 -F#-183-F#-expoarting ryan - @ryanbevolo x @tomdellow - motion sickness 183bpm (pain, guitar, melodic).wav",
+    ]
+
+    pyautogui.moveTo(1080,84,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(1717,190,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(1100,280,duration=0.5)
+    pyautogui.keyDown('ctrl')
+    pyautogui.scroll(5000)
+    pyautogui.scroll(-5000)
+    pyautogui.keyUp('ctrl')
+    pyautogui.moveTo(1728,210,duration=1)
+    pyautogui.dragTo(1840,210,duration=0.5)
+    pyautogui.moveTo(1721,210,duration=0.5)
+    pyautogui.dragTo(1832,210,duration=0.5)
+    pyautogui.moveTo(802, 721, duration=1) 
+    pyautogui.scroll(1)
+    pyautogui.scroll(1)
+
+
+#ADD FOLLOWING IDEA TO QUERY TO GO DOWN 1 by 1:         pyautogui.moveTo(195, (290+25*(query_count-23)), duration=0.2) 
+
+    pyautogui.moveTo(100, 1057, duration=.1) 
+    pyautogui.click()
+    loop_name = loop_names[query_count - 1]
+    pyautogui.typewrite(loop_name)
+    pyautogui.hotkey('enter')
+    pyautogui.sleep(1)
+
+    pyautogui.moveTo(162,189,duration=0.5)
+    pyautogui.click()
+    pyautogui.sleep(1)
+    pyautogui.dragTo(820,780,duration=0.5)
+
+    #Sets BPM
+    pyautogui.moveTo(820, 725, duration=0.2) 
+    pyautogui.moveTo(820, 782, duration=0.2) 
+    pyautogui.rightClick()
+    pyautogui.moveTo(920, 800, duration=0.2) 
+    pyautogui.click()
+    pyautogui.moveTo(735, 774, duration=0.2) 
+    pyautogui.dragTo(620,774,duration=0.2)
+    pyautogui.moveTo(726,770,duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.moveTo(774, 840, duration=0.2) 
+    pyautogui.click()
+    copied_text = pyperclip.paste()
+    pyautogui.press('enter')
+    pyautogui.moveTo(620, 26, duration=0.2) 
+    pyautogui.rightClick()
+    pyautogui.moveTo(695, 330, duration=0.2) 
+    pyautogui.click()
+    pyautogui.moveTo(592, 298, duration=0.2) 
+    pyautogui.hotkey('ctrl', 'v')
+    pyautogui.press('enter')
+
+
+
+
+    pyautogui.moveTo(446, 208, duration=0.2) 
+    pyautogui.click()
+    pyautogui.moveTo(648, 217, duration=0.2) 
+    pyautogui.dragTo(1800,217,duration=0.5)
+    pyautogui.moveTo(820, 721, duration=.5) 
+    pyautogui.scroll(-1)
+    pyautogui.scroll(-1)
+
+    pyautogui.moveTo(280, 1066, duration=.1) 
+    pyautogui.click()
+
+    #drum initializing
+    pyautogui.moveTo(100, 1057, duration=.1) 
+    pyautogui.click()
+    pyautogui.typewrite("@dieomx2", interval=0.1)
+    pyautogui.moveTo(195, 202, duration=0.2) 
+    pyautogui.click()
+    #808 dragging
+    pyautogui.moveTo(195, 220, duration=0.2) 
+    pyautogui.click()
+    coin_flip_int = random.randint(1,2)
+
+    if coin_flip_int == 1:
+        pyautogui.moveTo(195,246)
+
+    else:
+        random_index_808 = random.randint(1, 5)
+        eight_y_coordinate = 25 * random_index_808
+        pyautogui.moveTo(195,246+eight_y_coordinate)
+
+    pyautogui.dragTo(820,780,duration=0.5)
+    pyautogui.moveTo(195, 229, duration=0.2) 
+    pyautogui.click()
+    #clap dragging
+    pyautogui.moveTo(195, 290, duration=0.2) 
+    pyautogui.click()
+
+    random_index_clap = random.randint(1, 12)
+    clap_y_coordinate = 25 * random_index_clap
+    pyautogui.moveTo(195,365+clap_y_coordinate)
+
+    pyautogui.dragTo(820,815,duration=0.5)
+    pyautogui.moveTo(195, 330, duration=0.2) 
+    pyautogui.dragTo(820,815,duration=0.5)
+
+
+    pyautogui.moveTo(195, 290, duration=0.2) 
+    pyautogui.click()
+    #hat dragging
+    pyautogui.moveTo(195, 400, duration=0.2) 
+    pyautogui.click()
+
+    random_index_hat = random.randint(1, 10)
+    hat_y_coordinate = 25 * random_index_hat
+    pyautogui.moveTo(195,400+hat_y_coordinate)
+
+    pyautogui.dragTo(820,850,duration=0.5)
+    pyautogui.moveTo(195, 400, duration=0.2) 
+    pyautogui.click()
+
+    #snare dragging
+    pyautogui.moveTo(195, 577, duration=0.5) 
+    pyautogui.click()
+
+    random_index_snare = random.randint(1, 12)
+    snare_y_coordinate = 25 * random_index_snare
+    pyautogui.moveTo(195,600+snare_y_coordinate)
+
+    pyautogui.dragTo(820,900,duration=0.5)
+    pyautogui.moveTo(195, 577, duration=0.2) 
+    pyautogui.click()
+
+    #kick dragging
+    pyautogui.moveTo(195,420, duration=0.5) 
+    pyautogui.click()
+
+    random_index_kick = random.randint(1, 5)
+    kick_y_coordinate = 25 * random_index_kick
+    pyautogui.moveTo(195,420+kick_y_coordinate)
+
+    pyautogui.dragTo(820,929,duration=0.5)
+    pyautogui.moveTo(195, 420, duration=0.2) 
+    pyautogui.click()
+
+    #openHat dragging
+    pyautogui.moveTo(195,485, duration=0.5) 
+    pyautogui.click()
+
+    random_index_openhat = random.randint(1, 12)
+    oh_y_coordinate = 25 * random_index_openhat
+    pyautogui.moveTo(195,485+oh_y_coordinate)
+    pyautogui.dragTo(820,968,duration=0.5)
+
+    random_index_openhat2 = random.randint(1, 12)
+    oh_y_coordinate2 = 25 * random_index_openhat2
+    pyautogui.moveTo(195,485+oh_y_coordinate2)
+    pyautogui.dragTo(820,1000,duration=0.5)
+
+    #clearing and adding midi 
+    pyautogui.moveTo(195, 485, duration=0.2) 
+    pyautogui.click()
+    pyautogui.moveTo(282,1062,duration=0.2)
+    pyautogui.click()
+    pyautogui.click(200,1060)
+    pyautogui.typewrite("'Heartless'", interval=0.1)
+    pyautogui.moveTo(195, 202, duration=0.2) 
+    pyautogui.click()
+    #808 Midi
+    pyautogui.moveTo(195,225, duration=0.2) 
+    pyautogui.click()
+
+
+
+
+    random_index_808_midi = random.randint(1, 15)
+    eightOeight_y_coordinate = 25 * random_index_808_midi
+    pyautogui.moveTo(195,225+eightOeight_y_coordinate,duration=0.5)
+    
+    pyautogui.dragTo(820,780,duration=0.5)
+    pyautogui.moveTo(195, 219, duration=0.2) 
+    pyautogui.scroll(10000)
+    pyautogui.PAUSE = 0.5
+
+    pyautogui.moveTo(195, 250, duration=0.2) 
+    pyautogui.scroll(10000)
+    pyautogui.moveTo(195, 215, duration=0.2) 
+
+    pyautogui.PAUSE = 0.5
+    pyautogui.click()
+
+    #Hat Midi
+    pyautogui.moveTo(195,250, duration=0.2) 
+    pyautogui.click()
+
+
+
+    random_index_hat_midi = random.randint(1, 10)
+    hats_y_coordinate = 25 * random_index_hat_midi
+    pyautogui.moveTo(195,250+hats_y_coordinate,duration=0.5)
+
+
+    pyautogui.dragTo(820,855,duration=0.5)
+    pyautogui.moveTo(195, 250, duration=0.2) 
+    pyautogui.scroll(10000)
+    pyautogui.PAUSE = 0.5
+    pyautogui.click()
+
+    #OpenHat Midi
+    random_index_ohat_midi = random.randint(1, 5)
+    ohats_y_coordinate = 25 * random_index_ohat_midi
+    pyautogui.moveTo(195,340,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(195,340+ohats_y_coordinate,duration=0.5)
+    pyautogui.dragTo(820,965,duration=0.5)
+    pyautogui.moveTo(195,469+ohats_y_coordinate)
+    pyautogui.dragTo(820,1007,duration=0.5)
+
+    pyautogui.moveTo(195, 340, duration=0.2) 
+    pyautogui.scroll(10000)
+    pyautogui.PAUSE = 0.5
+    pyautogui.click()
+    #Snare Midi
+    pyautogui.moveTo(195,299, duration=0.2) 
+    pyautogui.click()
+
+   
+    random_index_snare_midi = random.randint(1, 9)
+    snares_y_coordinate4 = 25 * random_index_snare_midi
+    pyautogui.moveTo(195,299+snares_y_coordinate4,duration=0.5)
+
+    
+    pyautogui.dragTo(820,890,duration=0.5)
+    pyautogui.press('enter')
+    pyautogui.moveTo(195, 299, duration=0.2) 
+    pyautogui.scroll(10000)
+    pyautogui.PAUSE = 0.5
+    pyautogui.click()
+
+    #kicks
+    pyautogui.moveTo(820, 770, duration=0.2) 
+    pyautogui.rightClick()
+    pyautogui.moveTo(1146,774, duration=0.2)
+    pyautogui.click()
+    pyautogui.moveTo(820,929, duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.click(1200,800)
+
+
+
+
+
+    #Sets Key
+    pyautogui.moveTo(820, 725, duration=0.2) 
+    pyautogui.scroll(1)
+    pyautogui.scroll(1)
+
+    pyautogui.moveTo(820, 782, duration=0.2) 
+    pyautogui.rightClick()
+    pyautogui.moveTo(1000, 800, duration=0.2) 
+    pyautogui.click()
+    pyautogui.moveTo(826, 774, duration=0.2) 
+    pyautogui.dragTo(860,774,duration=0.2)
+    pyautogui.moveTo(840,770,duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.moveTo(851, 840, duration=0.2) 
+    pyautogui.click()
+    copied_text = pyperclip.paste()
+    pyautogui.press('enter')
+
+    pyautogui.moveTo(829, 724, duration=0.2) 
+    pyautogui.scroll(-1)
+    pyautogui.scroll(-1)
+
+    pyautogui.moveTo(820, 1005, duration=0.5) 
+    pyautogui.click()
+    pyautogui.moveTo(820, 780, duration=0.5) 
+    pyautogui.click()
+    pyautogui.moveTo(1027, 278, duration=0.2) 
+    pyautogui.rightClick()
+    pyautogui.moveTo(1100, 355, duration=0.2) 
+    pyautogui.click()
+
+    #if statements for tuning
+    if copied_text == 'C-' or copied_text == 'C- ' or copied_text=='C':
+        pyautogui.typewrite('0')
+        pyautogui.press('enter')
+    elif copied_text == 'C#' or copied_text == 'C#-'or copied_text == 'Db' or copied_text == 'Db-':
+        pyautogui.typewrite('100')
+        pyautogui.press('enter')
+    elif copied_text == 'D-'or copied_text == 'D- 'or copied_text=='D':
+        pyautogui.typewrite('200')
+        pyautogui.press('enter')
+    elif copied_text == 'D#'or copied_text == 'D#-'or copied_text == 'Eb' or copied_text == 'Eb-':
+        pyautogui.typewrite('300')
+        pyautogui.press('enter')
+    elif copied_text == 'E-'or copied_text == 'E- 'or copied_text=='E':
+        pyautogui.typewrite('400')
+        pyautogui.press('enter')
+    elif copied_text == 'F-'or copied_text == 'F- 'or copied_text=='F':
+        pyautogui.typewrite('500')
+        pyautogui.press('enter')
+    elif copied_text == 'F#'or copied_text == 'F#-':
+        pyautogui.typewrite('600')
+        pyautogui.press('enter')
+    elif copied_text == 'G-'or copied_text == 'G- 'or copied_text=='G':
+        pyautogui.typewrite('700')
+        pyautogui.press('enter')
+    elif copied_text == 'G#'or copied_text == 'G#-'or copied_text == 'Ab' or copied_text == 'Ab-':
+        pyautogui.typewrite('-400')
+        pyautogui.press('enter')
+    elif copied_text == 'A-'or copied_text == 'A- 'or copied_text=='A':
+        pyautogui.typewrite('-300')
+        pyautogui.press('enter')
+    elif copied_text == 'A#'or copied_text == 'A#-' or copied_text == 'Bb' or copied_text == 'Bb-':
+        pyautogui.typewrite('-200')
+        pyautogui.press('enter')
+    elif copied_text == 'B-'or copied_text == 'B- 'or copied_text=='B':
+        pyautogui.typewrite('-100')
+        pyautogui.press('enter') 
+    else:
+        pyautogui.typewrite('0')
+        pyautogui.press('enter')
+
+
+    #make switch up drum patterns
+    pyautogui.hotkey('ctrl', 'shift','c')
+
+    coin_flip_int_switchup = random.randint(1,2)
+
+    if coin_flip_int_switchup == 1:
+        pyautogui.moveTo(195,250, duration=0.2) 
+        pyautogui.click()
+        random_index_hat2_midi = random.randint(11, 23)
+        hats2_y_coordinate = 25 * random_index_hat2_midi
+        pyautogui.moveTo(195,250+hats2_y_coordinate)
+        pyautogui.dragTo(820,852,duration=0.5)
+        pyautogui.moveTo(195,250)
+        pyautogui.click()
+        pyautogui.moveTo(195,225, duration=0.2) 
+        pyautogui.click()
+        random_index_8082_midi = random.randint(1, 14)
+        e082_y_coordinate = 25 * random_index_8082_midi
+        pyautogui.moveTo(195,225+e082_y_coordinate)
+        pyautogui.dragTo(820,780,duration=0.5)
+        pyautogui.moveTo(195,225, duration=0.2) 
+        pyautogui.click()
+
+    else:
+        pyautogui.moveTo(195,299, duration=0.2) 
+        pyautogui.click()
+        random_index_hat2_midi = random.randint(1, 9)
+        hats2_y_coordinate = 25 * random_index_hat2_midi
+        pyautogui.moveTo(195,299+hats2_y_coordinate)
+        pyautogui.dragTo(820,890,duration=0.5)
+        pyautogui.moveTo(195,299)
+        pyautogui.click()
+        pyautogui.moveTo(195,340, duration=0.2) 
+        pyautogui.click()
+        random_index_8082_midi = random.randint(1, 5)
+        e082_y_coordinate = 25 * random_index_8082_midi
+        
+        pyautogui.moveTo(195,340+e082_y_coordinate)
+        pyautogui.dragTo(820,964,duration=0.5)
+        pyautogui.moveTo(195,471+e082_y_coordinate)
+        pyautogui.dragTo(820,1001,duration=0.5)
+        
+
+        pyautogui.moveTo(195,340, duration=0.2) 
+        pyautogui.click()
+
+    #drums Splitting script
+    pyautogui.moveTo(1600,491,duration=0.1)
+    pyautogui.rightClick()
+    pyautogui.moveTo(1069,86,duration=0.1)
+    pyautogui.scroll(-1)
+
+
+    pyautogui.moveTo(727,268,duration=0.1)
+    pyautogui.dragTo(840,269,duration=0.2)
+
+    pyautogui.moveTo(1069,86,duration=0.1)
+    pyautogui.scroll(1)
+
+
+    pyautogui.moveTo(895,268,duration=0.1)
+    pyautogui.dragTo(1000,269,duration=0.2)
+
+    pyautogui.moveTo(1069,86,duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.moveTo(1400,441,duration=0.4)
+    pyautogui.click()
+    pyautogui.moveTo(1069,86,duration=0.2)
+    pyautogui.scroll(-1)
+
+    pyautogui.rightClick()
+    pyautogui.moveTo(1400,441,duration=0.4)
+    pyautogui.click()
+
+    #align drums part 1
+
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750, 312, duration=0.5)
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750, 384, duration=0.5)
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750, 425, duration=0.5)
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750, 476, duration=0.5)
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750,545, duration=0.5)
+    pyautogui.moveTo(750, 250, duration=0.5) 
+    pyautogui.dragTo(750,595, duration=0.5)
+
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828, 312, duration=0.5)
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828, 384, duration=0.5)
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828, 425, duration=0.5)
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828, 476, duration=0.5)
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828,545, duration=0.5)
+    pyautogui.moveTo(828, 250, duration=0.5) 
+    pyautogui.dragTo(828,595, duration=0.5)
+
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911, 312, duration=0.5)
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911, 384, duration=0.5)
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911, 425, duration=0.5)
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911, 476, duration=0.5)
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911,545, duration=0.5)
+    pyautogui.moveTo(911, 250, duration=0.5) 
+    pyautogui.dragTo(911,595, duration=0.5)
+
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995, 312, duration=0.5)
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995, 384, duration=0.5)
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995, 425, duration=0.5)
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995, 476, duration=0.5)
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995,545, duration=0.5)
+    pyautogui.moveTo(995, 250, duration=0.5) 
+    pyautogui.dragTo(995,595, duration=0.5)
+
+
+    #drum align pt2
+    pyautogui.moveTo(718,596,duration=0.2)
+    pyautogui.keyDown('ctrl')
+    pyautogui.click(clicks=2)
+    pyautogui.dragTo(1078, 240, duration=1)
+    pyautogui.keyUp('ctrl')
+    pyautogui.hotkey('ctrl','c')
+    pyautogui.moveTo(1057,170,duration=0.5)
+    pyautogui.click()
+    pyautogui.hotkey('ctrl','v')
+    pyautogui.moveTo(1389,170,duration=0.5)
+    pyautogui.click()
+    pyautogui.hotkey('ctrl','v')
+
+    #colorChecking
+    #colorChecking
+    pyautogui.moveTo(1690,204,duration=0.5)
+    pixel_color = pyautogui.pixel(pyautogui.position(1690).x, pyautogui.position(204).y)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pyautogui.moveTo(1690,662,duration=0.5)
+    pixel_color2 = pyautogui.pixel(pyautogui.position(1690).x, pyautogui.position(662).y)
+    pyautogui.moveTo(1690,251,duration=0.5)
+
+    if pixel_color == pixel_color2:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1690,662,duration=0.5)
+        pyautogui.moveTo(1650,251,duration=0.5)
+        pyautogui.mouseUp(button='right')  
+
+    pyautogui.moveTo(1615,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color3 = pyautogui.pixel(pyautogui.position(1615).x, pyautogui.position(204).y)
+    print(pixel_color3)
+    if pixel_color2 == pixel_color3:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1615,601,duration=0.5)
+        pyautogui.moveTo(1570,204,duration=0.5)
+        pyautogui.mouseUp(button='right')  
+
+    pyautogui.moveTo(1540,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color4 = pyautogui.pixel(pyautogui.position(1540).x, pyautogui.position(204).y)
+
+    if pixel_color2 == pixel_color4:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1540,601,duration=0.5)
+        pyautogui.moveTo(1490,204,duration=0.5)
+
+        pyautogui.mouseUp(button='right')      
+
+    pyautogui.moveTo(1450,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color5 = pyautogui.pixel(pyautogui.position(1450).x, pyautogui.position(204).y)
+
+    if pixel_color2 == pixel_color5:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1450,601,duration=0.5)
+        pyautogui.moveTo(1414,204,duration=0.5)
+
+        pyautogui.mouseUp(button='right')    
+
+    pyautogui.moveTo(1376,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color6 = pyautogui.pixel(pyautogui.position(1376).x, pyautogui.position(204).y)
+
+    if pixel_color2 == pixel_color6:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1376,601,duration=0.5)
+        pyautogui.moveTo(1330,204,duration=0.5)
+
+        pyautogui.mouseUp(button='right')    
+
+    pyautogui.moveTo(1290,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color7 = pyautogui.pixel(pyautogui.position(1290).x, pyautogui.position(204).y)
+
+    if pixel_color2 == pixel_color7:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1290,601,duration=0.5)
+        pyautogui.moveTo(1250,204,duration=0.5)        
+        pyautogui.mouseUp(button='right')    
+
+    pyautogui.moveTo(1209,204,duration=0.5)
+    print(f"Color at mouse cursor: {pixel_color}")
+    pixel_color8 = pyautogui.pixel(pyautogui.position(1209).x, pyautogui.position(204).y)
+
+    if pixel_color2 == pixel_color8:
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1209-40,601,duration=0.5)
+        pyautogui.mouseUp(button='right')
+
+    #arranging beat
+    Arrangement = random.randint(1,8)
+    print (Arrangement)
+    if Arrangement==1:
+        #standard ommission
+        pyautogui.moveTo(950,400)
+        pyautogui.rightClick()
+        #full clear
+        pyautogui.moveTo(1072,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1072,600,duration=0.5)
+        pyautogui.mouseUp(button='right')   
+
+        pyautogui.moveTo(1330,327)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1420,414)
+        pyautogui.rightClick()
+    if Arrangement==2:
+
+
+        pyautogui.moveTo(915,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(915,320,duration=0.5)
+        pyautogui.mouseUp(button='right')       
+        pyautogui.moveTo(915,450)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(915,600,duration=0.5)
+        pyautogui.mouseUp(button='right')      
+        pyautogui.moveTo(1161,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1161,600,duration=0.5)
+        pyautogui.mouseUp(button='right')  
+        pyautogui.moveTo(1425,400)
+        pyautogui.rightClick()
+    if Arrangement==3:
+        #row copy
+
+
+
+        pyautogui.moveTo(920,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(920,600,duration=0.5)
+        pyautogui.mouseUp(button='right')
+        pyautogui.moveTo(1180,299)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1454,425)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1454,465)
+        pyautogui.rightClick()
+
+    if Arrangement==4:
+
+        pyautogui.moveTo(772,299)
+        pyautogui.rightClick()
+        pyautogui.moveTo(950,400)
+        pyautogui.rightClick()
+        #full clear
+        pyautogui.moveTo(1156,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1156,600,duration=0.5)
+        pyautogui.mouseUp(button='right')   
+
+        pyautogui.moveTo(1330,327)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1420,414)
+        pyautogui.rightClick()
+
+    if Arrangement==5:
+
+        pyautogui.moveTo(915,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(915,320,duration=0.5)
+        pyautogui.mouseUp(button='right')       
+        pyautogui.moveTo(915,450)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(915,600,duration=0.5)
+        pyautogui.mouseUp(button='right')      
+        pyautogui.moveTo(1161,260)
+        pyautogui.rightClick()
+
+        pyautogui.moveTo(1346,299,duration=0.5)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1522,299,duration=0.5)
+        pyautogui.mouseDown(button='right')
+
+        pyautogui.moveTo(1522,600,duration=0.5)
+        pyautogui.mouseUp(button='right')  
+        pyautogui.moveTo(1425,400)
+        pyautogui.rightClick()
+
+    if Arrangement==6:
+        #row copy
+
+
+
+
+        pyautogui.moveTo(840,400)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1090,260)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1090,600,duration=0.5)
+        pyautogui.mouseUp(button='right')
+        pyautogui.moveTo(1250,299)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1454,425)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1454,465)
+        pyautogui.rightClick()
+
+    if Arrangement==7:
+    #full clear
+        pyautogui.moveTo(908,410)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(908,511,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+    #claps
+        pyautogui.moveTo(1075,410)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1075,600,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+        pyautogui.moveTo(1075,250)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1075,320,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+
+        pyautogui.moveTo(1330,310)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1330,510)
+        pyautogui.rightClick()
+    if Arrangement==8:
+    #full clear
+        pyautogui.moveTo(915,250)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(915,315,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+    #claps
+        pyautogui.moveTo(1164,410)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1164,600,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+        pyautogui.moveTo(1164,250)
+        pyautogui.mouseDown(button='right')
+        pyautogui.moveTo(1164,320,duration=0.5)
+        pyautogui.mouseUp(button='right') 
+
+        pyautogui.moveTo(1330,310)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1330,510)
+        pyautogui.rightClick()
+        pyautogui.moveTo(1500,400)
+        pyautogui.rightClick()
+
+
+    # #switchup for melody
+    # switchup = random.randint(1,10)
+    # print (switchup)
+    # if switchup == 5:
+    #     pyautogui.moveTo(1299,74,duration=0.5)
+    #     pyautogui.click()
+    #     pyautogui.moveTo(1919,999)
+    #     pyautogui.click()
+    #     pyautogui.moveTo(1299,74,duration=0.5)
+    #     pyautogui.click()
+
+    # switchup2 = random.randint(1,10)
+    # print (switchup2)
+    # if switchup2 == 5:
+    #     pyautogui.moveTo(1299,74,duration=0.5)
+    #     pyautogui.click()
+    #     pyautogui.moveTo(1914,1024)
+    #     pyautogui.click()
+    #     pyautogui.moveTo(1299,74,duration=0.5)
+    #     pyautogui.click()
+
+    # pyautogui.moveTo(1729,217)
+    # pyautogui.rightClick()
+
+    #export query
+    #pyautogui.moveTo(450,33,duration=0.5)
+    #pyautogui.click()
+    pyautogui.moveTo(1826,260,duration=0.5)
+    pyautogui.keyDown('ctrl')
+    pyautogui.dragTo(1826,208,duration=0.5)
+    pyautogui.keyUp('ctrl')
+    pyautogui.press('delete')
+    pyautogui.rightClick()
+
+
+    pyautogui.moveTo(1744,299,duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.hotkey('ctrl','r')
+    pyautogui.hotkey('windows','right arrow')
+    pyautogui.hotkey('windows','down arrow')
+    pyautogui.moveTo(1070,520,duration=10)
+    pyautogui.click()
+    pyautogui.moveTo(1711,202,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1720,65,duration=5)
+    pyautogui.click()
+    pyautogui.typewrite('beatExports')
+    pyautogui.hotkey('enter')
+    pyautogui.moveTo(1550,179,duration=10)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1400,229,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1116,944,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.dragTo(1400,944,duration=0.5)
+    pyautogui.hotkey('delete')
+    type_write_variable_with_pyautogui(query_count)
+
+    pyautogui.moveTo(1709,1029,duration=0.2)
+    pyautogui.click()
+    pyautogui.moveTo(1690,440,duration=10)
+    pyautogui.moveTo(1180,891,duration=1)
+    pyautogui.click()
+
+    #exportUntagged
+    pyautogui.moveTo(1740,400,duration=20)
+    pyautogui.rightClick()
+    pyautogui.moveTo(621,621,duration=1)
+    pyautogui.click()
+    pyautogui.moveTo(1744,299,duration=0.2)
+    pyautogui.rightClick()
+    pyautogui.hotkey('ctrl','r')
+    pyautogui.hotkey('windows','right arrow')
+    pyautogui.hotkey('windows','down arrow')
+    pyautogui.moveTo(1070,520,duration=0.2)
+    pyautogui.click()
+    pyautogui.moveTo(1711,202,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1720,65,duration=5)
+    pyautogui.click()
+    pyautogui.typewrite('beatExports')
+    pyautogui.hotkey('enter')
+    pyautogui.moveTo(1550,179,duration=10)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1400,285,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1116,944,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.dragTo(1400,944,duration=0.5)
+    pyautogui.hotkey('delete')
+    type_write_variable_with_pyautogui(query_count)
+    pyautogui.moveTo(1709,1029,duration=0.2)
+    pyautogui.click()
+    pyautogui.moveTo(1690,440,duration=10)
+    pyautogui.moveTo(1180,891,duration=1)
+    pyautogui.click()
+    pyautogui.moveTo(1800,200,duration=20)
+
+    pyautogui.moveTo(621,621,duration=1)
+    pyautogui.click()
+
+    #exportStems
+    pyautogui.moveTo(25,25,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(45,271,duration=0.5)
+    pyautogui.moveTo(445,271,duration=0.5)
+    pyautogui.moveTo(445,445,duration=0.5)
+    pyautogui.moveTo(572,445,duration=0.5)
+    pyautogui.click()
+
+    pyautogui.hotkey('windows','right arrow')
+    pyautogui.hotkey('windows','down arrow')
+    pyautogui.moveTo(1070,570,duration=0.2)
+    pyautogui.click()
+    pyautogui.moveTo(1450,290,duration=0.5)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1720,65,duration=5)
+    pyautogui.click()
+    pyautogui.typewrite('beatExports')
+    pyautogui.hotkey('enter')
+    pyautogui.moveTo(1550,179,duration=10)
+    pyautogui.doubleClick()
+    pyautogui.moveTo(1400,182,duration=0.2)
+    pyautogui.doubleClick()
+    pyautogui.hotkey('ctrl','shift','n')
+    pyautogui.moveTo(1568,115,duration=5)
+    pyautogui.hotkey('enter')
+    pyautogui.moveTo(1700,1029,duration=1)
+    pyautogui.click()
+    pyautogui.moveTo(1700,1029,duration=1)
+    pyautogui.hotkey('enter')
+    pyautogui.moveTo(1700,400,duration=120)
+    pyautogui.hotkey('enter')
+
+    pyautogui.moveTo(1718,200,duration=0.5)
+    pyautogui.rightClick()
+    pyautogui.moveTo(1728,217,duration=0.5)
+    pyautogui.moveTo(1072,74,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(1870,572,duration=0.5)
+    pyautogui.keyDown('ctrl')
+    pyautogui.dragTo(651,187,duration=1)
+    pyautogui.keyUp('ctrl')
+    pyautogui.press('delete')
+    pyautogui.moveTo(400,590,duration=0.5)
+    pyautogui.click()
+    pyautogui.moveTo(400,200,duration=0.5)
+    pyautogui.keyDown('shift')
+    pyautogui.click()
+    pyautogui.keyUp('shift')
+    pyautogui.rightClick()
+    pyautogui.moveTo(500,494,duration=0.5)
+    pyautogui.click()
+    pyautogui.press('enter')
+    pyautogui.moveTo(282,1060,duration=0.5)
+    pyautogui.click()
+
+query_count = 26
+while query_count < 63:
+    existing_query(query_count + 1)  # Call the existing query function with query count as an argument
+    query_count += 1  # Increment the query count
