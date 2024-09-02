@@ -1,6 +1,7 @@
 # BeatMakingQuery
 Set of code used to automatically create, upload, and distribute trap beats
 I am utilizing this readme to give a general overview of how the current code works, so that it can be rebuilt in a way that logically makes sense from an automation standpoint.
+Currently this query is designed to run in FL Studio, but DawDreamer is ideal for creating beats in Python
 
 Pt. 1: Sounds
 Although this query is fairly autonomous, it requires premade sounds to work properly. At this point, generative AI is not powerful enough to create loops. Instead, services like Splice & online loop kits are very useful, even if royalties need to be split.
