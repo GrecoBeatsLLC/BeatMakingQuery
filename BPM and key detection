@@ -1,0 +1,57 @@
+import os
+import re
+import librosa
+import numpy as np
+
+# Function to estimate key
+def estimate_key(y, sr):
+    # Calculate chromagram
+    chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+    
+    # Sum the chroma features over time
+    chroma_sum = np.sum(chroma, axis=1)
+    
+    # Find the key with the maximum energy
+    key_index = np.argmax(chroma_sum)
+    
+    # Mapping from index to key
+    key_map = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
+    
+    estimated_key = key_map[key_index % 12]
+    return estimated_key
+
+# Function to get BPM and key and rename file
+def process_audio(file_path, bpm):
+    try:
+        # Load audio file
+        y, sr = librosa.load(file_path)
+
+        # Estimate key
+        estimated_key = estimate_key(y, sr)
+
+        # Rename the file
+        base_name = os.path.basename(file_path)
+        new_name = f"{bpm} -{estimated_key}-{base_name}"
+        os.rename(file_path, os.path.join(os.path.dirname(file_path), new_name))
+
+        print(f"Processed: {file_path}")
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+
+# Directory containing audio samples
+directory = 'D:\ROD WAVE BEATS\TIMED_LOOPS'
+
+# Iterate through audio files in the directory
+file_count = 0
+for filename in os.listdir(directory):
+    if file_count >= 59:
+        break  # Stop after processing 59 files
+    if filename.endswith('.mp3') or filename.endswith('.wav'):  # Adjust file extensions as needed
+        file_path = os.path.join(directory, filename)
+        
+        # Extract BPM from the filename (assuming 3 consecutive digits represent BPM)
+        match = re.search(r'\d{3}', filename)
+        if match:
+            bpm = int(match.group())
+            process_audio(file_path, bpm)
+            file_count += 1
