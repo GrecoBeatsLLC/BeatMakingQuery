@@ -1,0 +1,46 @@
+import os
+import re
+from moviepy.editor import *
+
+# Path to input images and audio files
+photos_folder = r"D:\ROD WAVE BEATS\resized photos"
+audios_folder = r"D:\BeatExports\TaggedWAV"
+
+# Output video folder
+output_folder = r"D:\VIDEO_OUTPUTS"
+
+# Create output folder if it doesn't exist
+os.makedirs(output_folder, exist_ok=True)
+
+# Get list of photo and audio files
+photo_files = sorted([f for f in os.listdir(photos_folder) if f.startswith("processed_image_")],
+                     key=lambda x: int(re.search(r'\d+', x).group()))
+
+audio_files = sorted([f for f in os.listdir(audios_folder) if f.startswith("")],
+                      key=lambda x: int(re.search(r'\d+', x).group()))
+
+# Set video dimensions
+video_width, video_height = 1920, 1080
+
+# Create video for each pair of photo and audio
+for i, (photo_file, audio_file) in enumerate(zip(photo_files, audio_files), 1):
+    photo_path = os.path.join(photos_folder, photo_file)
+    audio_path = os.path.join(audios_folder, audio_file)
+
+    # Create video with the photo and audio
+    video_clip = ImageClip(photo_path).set_duration(AudioFileClip(audio_path).duration)
+    video_clip = video_clip.set_audio(AudioFileClip(audio_path))
+    video_clip.write_videofile(
+        os.path.join(output_folder, f"output_video_{i}.mp4"),
+        fps=24,
+        codec="libx264",
+        audio_codec="aac",
+        temp_audiofile=f"temp_audio_{i}.m4a",
+        remove_temp=True,
+    )
+
+    if os.path.exists(os.path.join(output_folder, f"output_video_{i}.mp4")):
+        print(f"Processed video {i}")
+    else:
+        print(f"Error creating video {i}")
+print("All videos created.")
